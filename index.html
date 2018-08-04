@@ -5,23 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Jon Lascaze</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
      <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/animate.css" />
      <link rel="stylesheet" href="./assets/css/materialize.min.css">
 </head>
 <body>
 
-    <div class="container center-align">
-        <img class="center-align test-image circle responsive-img" src="./assets/img/Type.gif">
-        <p id="demo"></p>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="./assets/script/script.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="./assets/script/materialize.min.js"></script>
-    
+    <div id="start-container" class="container center-align">
+        <img id="self-gif" class="center-align test-image circle responsive-img z-depth-5" src="./assets/img/Type.gif">
+        <h1 class="ml12">Designs by Jon Lascaze</h1>
+    </div>
+        
+
+
+        <div id="page-container" class="container hidden">
+
+         
+          <!-- Top row - About me -->
+          <a href="#">
+          <div class='row'>
+            <div class="col s12 m12">
+            <div id="aboutme" class="card-panel white aboutme white-text center-align z-depth-5 grow">
+              <p>About Me</p>
+            </div>
+            </div>
+          </div>
+        </a>
+      
+        <!-- Second row - portfolio -->
+        <a href="#">
+        <div class="row">
+          <div class="col s12 m12">
+            <div id="applications" class="card-panel white white-text center-align appcard z-depth-5 grow">
+              <p>Applications</p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+
+        <!-- Third row -  -->
+        <a href="#">
+        <div class="row">
+            <div class="col s12 m12">
+              <div id="website" class="card-panel white white-text center-align webcard z-depth-5 grow">
+                <p>Websites</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Footer -->
+      <footer id="page-footer" class="page-footer hidden">
+          <div class="footer-copyright black">
+            <div class="container icons center-align">
+  
+            <i id="github-icon" class="fab fa-github fa-3x"></i>
+            <i id="linkedin-icon" class="fab fa-linkedin fa-3x"></i>
+            <i id="email-icon" class="fas fa-envelope fa-3x"></i>
+
+
+
+
+            </div>
+          </div>
+        </footer>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <script src="./assets/script/script.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="./assets/script/materialize.min.js"></script>
+
 </body>
 </html>
