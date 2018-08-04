@@ -1,10 +1,117 @@
-.test-image {
-    margin-top: 5rem;
-    width: 350px;
-    height: 350px;
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+@media screen and (max-width: 700px) {
+    div.card-panel.white.aboutme, div.card-panel.appcard, div.card-panel.webcard{
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+    }
+    #port-photo {
+        display: none;
+    }
+
 }
 
-body {
-    background-color: #0d47a1;
-    color: white;
+
+
+#port-photo {
+    width: 250px;
+    height: 250px;
+    margin: 6px auto;
 }
+
+div.card-panel.white.aboutme, div.card-panel.appcard, div.card-panel.webcard {
+    height: 250px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 48px;
+    text-align: center;
+    background-image: url("../img/mars.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+}
+
+div.card-panel.white.aboutme, div.card-panel.appcard, div.card-panel.webcard:hover {
+    background-color: white;
+
+}
+
+#self-gif {
+    width: 250px;
+    height: 250px;
+}
+
+
+body {
+    background-image: url(../img/mochaGrunge.png);
+    color: white;
+    margin-top: 5rem !important;
+}
+
+
+#page-container {
+    background-image: url(../img/mochaGrunge.png);
+}
+
+
+.container {
+    height: 80% !important;
+    margin-bottom: 3rem !important;   
+}
+
+#github-icon, #linkedin-icon, #email-icon  {
+    margin-right: 2rem;
+}
+
+footer.page-footer{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+div.container.hidden, footer.page-footer.hidden{
+    display: none;
+}
+
+.shrink {
+    transition: 1s ease;
+    }
+    
+    .shrink:hover{
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    transition: 1s ease;
+    }
+
+
+    .grow {
+        transition: 1s ease;
+        }
+        
+        .grow:hover{
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+        transition: 1s ease;
+        }
+        
+    
+    /* TESTING SPACE  */
+    .ml12 {
+        font-weight: 200;
+        font-size: 1.2em;
+        font-family: 'Press Start 2P', cursive;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+      }
+      
+      .ml12 .letter {
+        display: inline-block;
+        line-height: 1em;
+      }
