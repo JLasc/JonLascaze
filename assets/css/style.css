@@ -1,30 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
-
-@media screen and (max-width: 700px) {
-    div.card-panel.white.aboutme, div.card-panel.appcard, div.card-panel.webcard{
-        width: 100%;
-    }
-
-    .container {
-        width: 100%;
-    }
-    #port-photo {
-        display: none;
-    }
-
-}
+@import url('http://fonts.googleapis.com/css?family=Aladin');
 
 
 
-#port-photo {
-    width: 250px;
-    height: 250px;
-    margin: 6px auto;
-}
-
-div.card-panel.white.aboutme, div.card-panel.appcard, div.card-panel.webcard {
+#aboutme, #website, #applications{
     height: 250px;
     font-family: 'Luckiest Guy', cursive;
     font-size: 48px;
@@ -74,10 +55,55 @@ footer.page-footer{
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-div.container.hidden, footer.page-footer.hidden{
+div.container.hidden, footer.page-footer.hidden, div.container.center-align.hidden{
     display: none;
 }
 
+
+img.left.self-picture {
+    padding: 1rem 1rem 0rem 0rem;
+    margin-top: -9px;
+    height: 150px;
+    width: 150px;
+    
+}
+
+.text-justify {
+    text-align: justify;
+    font-size: 20px;
+}
+
+
+.testing-close-btn {
+    position: relative;
+    top: -11px;
+    left: -771px;
+}
+
+
+.feature-links i {
+    margin-right: 1rem;
+}
+
+ul li {
+    margin: 10px;
+}
+
+
+
+/* Page link CSS */
+
+.hidden-button{
+    display: none;
+}
+
+.about-me {
+    overflow: auto;
+    background-color: black !important;
+}
+
+
+/* Additional Adds - Grow/Shrink/Text Effect */
 .shrink {
     transition: 1s ease;
     }
@@ -114,4 +140,30 @@ div.container.hidden, footer.page-footer.hidden{
       .ml12 .letter {
         display: inline-block;
         line-height: 1em;
+      }
+
+
+      a:link {
+          color: white;
+      }
+
+      a:visited {
+          color: white;
+      }
+
+      .inset-text-effect, hr {
+        display: inline-block;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        border: none;
+        font: normal 70px/1 "Aladin", Helvetica, sans-serif;
+        color: rgba(48,48,48,1);
+        text-align: center;
+        text-transform: normal;
+        -o-text-overflow: clip;
+        text-overflow: clip;
+        white-space: pre;
+        text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67) ;
+        font-size: 100px
       }
