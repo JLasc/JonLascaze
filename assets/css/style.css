@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
-@import url('http://fonts.googleapis.com/css?family=Aladin');
+@import url('https://fonts.googleapis.com/css?family=Aladin');
 
 
 
@@ -157,7 +157,7 @@ ul li {
         -moz-box-sizing: content-box;
         box-sizing: content-box;
         border: none;
-        font: normal 70px/1 "Aladin", Helvetica, sans-serif;
+        font: normal 70px/1 "Aladin";
         color: rgba(48,48,48,1);
         text-align: center;
         text-transform: normal;
