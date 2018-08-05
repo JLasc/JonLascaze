@@ -97,6 +97,7 @@ anime.timeline({loop: false})
       var aboutSection = 
       `
       <div class="container">
+      <a class="waves-effect waves-light pulse btn black" id="back-about-me">Back</a>
       <div class="row">
       <img class="left self-picture" src="./assets/img/me.jpg">
       <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit tellus a turpis euismod porta. Phasellus efficitur lorem et dui luctus, in hendrerit dui congue. Suspendisse varius ultricies metus, ut venenatis nibh pulvinar ac. Suspendisse leo sem, dignissim eget felis sit amet, semper dictum ipsum. Praesent non aliquam neque, a fermentum sapien. Sed at ligula et mauris tristique laoreet. Duis sit amet justo eu turpis finibus dignissim at sed eros. Nulla interdum dolor neque, et elementum lorem egestas non. Praesent blandit lectus augue, vel pretium neque fringilla vel. Cras cursus felis ut ligula volutpat, ut condimentum massa mollis. Etiam erat erat, dictum tristique mauris sit amet, ullamcorper lacinia leo. Nullam at enim dapibus, tempor nibh a, dignissim erat. Praesent fermentum rhoncus quam at varius. Nunc bibendum urna vitae tempor vehicula. Integer faucibus mauris ut lacus consequat aliquet.</p>
@@ -111,7 +112,7 @@ anime.timeline({loop: false})
       </ul>
       </div>
       </div>
-      <a class="waves-effect waves-light pulse btn black" id="back-about-me">Back</a>
+      
       `
       $("#newMe").append(aboutSection);
     });
@@ -164,6 +165,7 @@ anime.timeline({loop: false})
       var appSection = 
       `
       <div class="container">
+      <a class="waves-effect waves-light pulse btn black" id="back-about-me">Back</a>
       <div class="row">
       <img class="left self-picture" src="./assets/img/me.jpg">
       <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit tellus a turpis euismod porta. Phasellus efficitur lorem et dui luctus, in hendrerit dui congue. Suspendisse varius ultricies metus, ut venenatis nibh pulvinar ac. Suspendisse leo sem, dignissim eget felis sit amet, semper dictum ipsum. Praesent non aliquam neque, a fermentum sapien. Sed at ligula et mauris tristique laoreet. Duis sit amet justo eu turpis finibus dignissim at sed eros. Nulla interdum dolor neque, et elementum lorem egestas non. Praesent blandit lectus augue, vel pretium neque fringilla vel. Cras cursus felis ut ligula volutpat, ut condimentum massa mollis. Etiam erat erat, dictum tristique mauris sit amet, ullamcorper lacinia leo. Nullam at enim dapibus, tempor nibh a, dignissim erat. Praesent fermentum rhoncus quam at varius. Nunc bibendum urna vitae tempor vehicula. Integer faucibus mauris ut lacus consequat aliquet.</p>
@@ -178,7 +180,7 @@ anime.timeline({loop: false})
       </ul>
       </div>
       </div>
-      <a class="waves-effect waves-light pulse btn black" id="back-about-me">Back</a>
+     
       `
       $("#newApp").append(appSection);
       });
