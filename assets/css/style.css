@@ -14,9 +14,6 @@
         font-size: 24px;
     }
 
-    p.text-justify {
-        font-size: 12px;
-    }
     .ml12 {
         font-size: 20px;
     }
@@ -90,7 +87,7 @@ img.left.self-picture {
 
 .text-justify {
     text-align: justify;
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 

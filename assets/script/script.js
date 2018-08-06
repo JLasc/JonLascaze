@@ -113,7 +113,7 @@ $(document).ready(function () {
               <i class="fab fa-linkedin-in"></i><a target="_blank" href="www.linkedin.com/in/jonathanlascaze
               ">LinkedIn</a>
               <i class="fab fa-github-alt"></i><a target="_blank" href="https://github.io/Jlasc">Github</a>
-              <i class="fas fa-file-pdf"></i><a href="./assets/files/JonLascaze2018.pdf" target="_blank">Resume</a>
+              <i class="fas fa-file-pdf"></i>Resume <a href="./assets/files/JonLascaze2018.pdf" target="_blank">PDF</a>/<a href="./assets/files/JonLascaze2018.jpg" target="_blank">JPG</a>
             </div>
             <div class="row aboutlinks">
               <i class="fab fa-stack-overflow"></i><a target="_blank" href="https://stackoverflow.com/users/10163364/jon-lascaze">Stack Overflow</a>
