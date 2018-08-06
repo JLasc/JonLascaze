@@ -89,10 +89,11 @@ $(document).ready(function () {
         $("#website").addClass("hidden-button")
       });
 
-    $("#aboutme").empty().animate({
+    $("#aboutme").animate({
       height: "700px",
     }, 1500, function () {
       $("#aboutme")
+        .empty()
         .removeAttr("id", "aboutme")
         .attr("id", "newMe");
       var aboutSection =
