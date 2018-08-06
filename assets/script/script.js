@@ -5,6 +5,14 @@ $(document).ready(function () {
   $('.parallax').parallax();
 
 
+  //Prevent Right Click
+document.oncontextmenu = function () { 
+    return false;
+ };
+ 
+ window.addEventListener('contextmenu', function (e) { 
+     e.preventDefault();
+ }, false);
 
 
   function empty() {
@@ -111,10 +119,15 @@ $(document).ready(function () {
             </p>
           </div>
           <div class="row center-align aboutlinks">
-              <i class="fab fa-linkedin-in"></i><a target="_blank" href="www.linkedin.com/in/jonathanlascaze
-              ">LinkedIn</a>
-              <i class="fab fa-github-alt"></i><a target="_blank" href="https://github.io/Jlasc">Github</a>
+              <i class="fab fa-linkedin-in"></i><a href="https://www.linkedin.com/in/jonathanlascaze" target="_blank">LinkedIn</a>
+
+
+              <i class="fab fa-github-alt"></i><a href="https://github.com/JLasc" target="_blank">Github</a>
+
+
               <i class="fas fa-file-pdf"></i><a href="./assets/files/JonLascaze2018.pdf" target="_blank">Resume</a> 
+
+
             </div>
             <div class="row aboutlinks">
               <i class="fab fa-stack-overflow"></i><a target="_blank" href="https://stackoverflow.com/users/10163364/jon-lascaze">Stack Overflow</a>
