@@ -1,30 +1,11 @@
 $(document).ready(function () {
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBeTXDX_PXFyDFgYA78zci7UL98XlA7_fI",
-      authDomain: "portfolio-api-a32a1.firebaseapp.com",
-      databaseURL: "https://portfolio-api-a32a1.firebaseio.com",
-      projectId: "portfolio-api-a32a1",
-      storageBucket: "portfolio-api-a32a1.appspot.com",
-      messagingSenderId: "30905765926"
-    };
-    firebase.initializeApp(config);
-    var database = firebase.database();
-
 
   //Materialize Init
   $('.materialboxed').materialbox();
   $('.parallax').parallax();
 
 
-  //Starting Logo Animation
-  function start() {
-    $("#self-gif")
-      .attr("src", "./assets/img/Type.gif")
-      .addClass("animated zoomIn");
-  };
 
-  start()
 
   function empty() {
     $("#start-container").empty()
@@ -58,6 +39,9 @@ $(document).ready(function () {
   setTimeout(startFadeOut, 1000 * 3.5)
   setTimeout(reveal, 1000 * 4)
 
+
+  /* Starting animation section  */
+
   // Wrap every letter in a span
   $('.ml12').each(function () {
     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
@@ -88,24 +72,29 @@ $(document).ready(function () {
     });
 
 
+
+  /* This starts the button click event section */
+
+
   //About Me - grow 
   $("#aboutme").click(function () {
+
     $("#applications")
       .slideUp(1500, function () {
         $("#applications").addClass("hidden-button")
       });
+
     $("#website")
       .slideUp(1500, function () {
         $("#website").addClass("hidden-button")
       });
+
     $("#aboutme").empty().animate({
       height: "700px",
     }, 1500, function () {
       $("#aboutme")
-        .addClass("about-me")
         .removeAttr("id", "aboutme")
         .attr("id", "newMe");
-
       var aboutSection =
         `
       <div class="container">
@@ -121,13 +110,14 @@ $(document).ready(function () {
             </p>
           </div>
           <div class="row center-align aboutlinks">
-              <i class="fab fa-linkedin-in"></i><a href="#">LinkedIn</a>
-              <i class="fab fa-github-alt"></i><a href="#">Github</a>
-              <i class="fas fa-file-pdf"></i><a href="#">Resume</a>
+              <i class="fab fa-linkedin-in"></i><a target="_blank" href="www.linkedin.com/in/jonathanlascaze
+              ">LinkedIn</a>
+              <i class="fab fa-github-alt"></i><a target="_blank" href="https://github.io/Jlasc">Github</a>
+              <i class="fas fa-file-pdf"></i><a href="./assets/files/JonLascaze2018.pdf" target="_blank">Resume</a>
             </div>
             <div class="row aboutlinks">
-              <i class="fab fa-stack-overflow"></i><a href="#">Stack Overflow</a>
-              <i class="far fa-envelope"></i><a href="#">Email</a>
+              <i class="fab fa-stack-overflow"></i><a target="_blank" href="https://stackoverflow.com/users/10163364/jon-lascaze">Stack Overflow</a>
+              <i class="far fa-envelope"></i><a href="mailto:lascaze.j@gmail.com">Email</a>
             </div>
             
         </div>
@@ -143,7 +133,6 @@ $(document).ready(function () {
   $(document).on("click", "#back-about-me", function () {
     $("#newMe")
       .empty()
-      .removeClass("about-me")
       .removeAttr("id", "newMe")
       .attr("id", "aboutme");
 
@@ -154,110 +143,134 @@ $(document).ready(function () {
       }, 1500, function () {
         $("#aboutme")
           .removeAttr("style");
+        });
+
         $("#applications").slideDown(1500, function () {
           $("#applications").removeClass("hidden-button");
         });
+
         $("#website").slideDown(1500, function () {
           $("#website").removeClass("hidden-button")
         });
-      });
+     
   });
+
+
+  //Portfolio Section
+  var objectArray = [
+    pictureArr = [
+      "./assets/img/portfolio-images/crystal-collector.png",
+      "./assets/img/portfolio-images/giftastic.png",
+      "./assets/img/portfolio-images/nyt-search.png",
+      "./assets/img/portfolio-images/psychic-game.png",
+      "./assets/img/portfolio-images/rps.png",
+      "./assets/img/portfolio-images/train-sched.png",
+      "./assets/img/portfolio-images/trivia.png",
+      "./assets/img/portfolio-images/w2di.png",
+      "./assets/img/portfolio-images/word-guess-game.png"
+    ],
+
+    nameArr = [
+      "<h5>Crystal Collector</h5>",
+      "<h5>GifTastic</h5>",
+      "<h5>New York Times Search</h5>",
+      "<h5>Psychic Game</h5>",
+      "<h5>Rock Paper Scissor</h5>",
+      "<h5>Persistent Train Schedule</h5>",
+      "<h5>Game of Thrones Trivia</h5>",
+      "<h5>Weather 2 Do It</h5>",
+      "<h5>Word Guess Game</h5>"
+    ],
+
+    descripArr = [
+      "This game utilizes javascript math generators. Match the target number by clicking crystals that change in value each round.",
+      "Gif search engine that utilizes the Giphy API",
+      "Article search engine that utilizies the NYT API",
+      "Computer randomly chooses a letter. Guess the letter before your attempts run out.",
+      "My first javascript project. Classic rock-paper-scissors",
+      "Mock train schedule that utilizes Firebase for persistent data",
+      "Game of thrones themed Trivia. Showcase on timers and intervals and particles.",
+      "First project apart of a student development team. Persistent to-do list that gives weather information, and also the ability to search for events using Meetup API",
+      "Vegetable themed version of the classic hangman game"
+
+    ],
+
+    animateArr = [
+      "imghvr-slide-up",
+      "imghvr-reveal-down",
+      "imghvr-reveal-up",
+      "imghvr-hinge-left",
+      "imghvr-fold-up",
+      "imghvr-reveal-right",
+      "imghvr-flip-vert",
+      "imghvr-shutter-in-out-vert",
+      "imghvr-zoom-out-down"
+    ],
+
+    linkArr = [
+      "https://jlasc.github.io/unit-4-game/",
+      "https://jlasc.github.io/GifTastic",
+      "https://jlasc.github.io/NYT-Search",
+      "https://jlasc.github.io/Psychic-Game",
+      "https://jlasc.github.io/Rock-Paper-Scissor",
+      "https://jlasc.github.io/Train-Scheduler",
+      "https://jlasc.github.io/TriviaGame",
+      "https://jlasc.github.io/ProjectUno",
+      "https://jlasc.github.io/Word-Guess-Game",
+    ]
+
+
+  ];
+
+  console.log(objectArray[0][0])
 
 
   // Application - grow
   $("#applications").on("click", function () {
 
-    $("#aboutme").slideUp(1500, function () {
-      $("#website").slideUp(1500, function () {
-        $("#website").addClass("hidden-button")
-      });
-      $("#aboutme").addClass("hidden-button")
-      $("#applications").animate({
-        height: "700px",
-      }, 1500, function () {
-        $("#applications").empty()
-          .addClass("about-me")
-          .removeAttr("id", "applications")
-          .attr("id", "newApp");
-
-        $("#website").slideUp(1500, function () {
-          $("#website").addClass("hidden-button")
-        });
-
-
-        function newPortfolioPic() {
-          
-          pictureObj = {
-            one:"./assets/img/portfolio-images/crystal-collector.png",
-            two:"./assets/img/portfolio-images/first-responsive-site.png",
-            three:"./assets/img/portfolio-images/giftastic.png",
-            four:"./assets/img/portfolio-images/nyt-search.png",
-            five:"./assets/img/portfolio-images/psychic-game.png",
-            six:"./assets/img/portfolio-images/rps.png",
-            seven:"./assets/img/portfolio-images/train-sched.png",
-            eight:"./assets/img/portfolio-images/trivia.png",
-            nine:"./assets/img/portfolio-images/w2di.png",
-            ten:"./assets/img/portfolio-images/word-guess-game.png"
-          };
-        
-
-          animateObj = {
-            one: "imghvr-slide-up",
-            two: "imghvr-slide-down",
-            three: "imghvr-reveal-down",
-            four: "imghvr-reveal-up", 
-            five: "imghvr-hinge-left",
-            six: "imghvr-fold-up",
-            seven: "imghvr-reveal-right",
-            eight: "imghvr-flip-vert",
-            nine: "imghvr-shutter-in-out-vert",
-            ten: "imghvr-zoom-out-down"
-          }
-
-
-          for (i=0; i < pictureObj.length; i++){
-            for(j=0; j < animateObj.length; j++){
-              pictureTemplate = `
-              <figure class="${animateObj[j]}">
-                <img class="sensei" src="${pictureObj[i]}">
-              <figcaption>
-                <h6>Crystal Collector</h6><br>
-                A game using javascript where the computer guesses a number. You must click the crystals to match that number.
-              </figcaption>
-               <a href="#"></a>
-              </figure>` 
-            }
-          }
-        };
-
-
-
-
-        var appSection =
-          `
-      <div class="container">
-        <a class="waves-effect waves-light pulse btn black" id="back-app">Back</a></span>
-        <div class="row"> 
-        <div class="col s6">
-        <figure class="imghvr-flip-diag-1" style="background-color:black;">
-        <img class="sensei" src="./assets/img/portfolio-images/crystal-collector.png">
-        <figcaption>
-          <h6>Crystal Collector</h6><br>
-            A game using javascript where the computer guesses a number. You must click the crystals to match that number.
-        </figcaption>
-        <a href="#"></a>
-        </figure>
-        </div>
-        </div>
-
-
-        
-      </div>
-      `
-
-        $("#newApp").append(appSection).fadeIn(1500);
-      });
+    $("#website").slideUp(1500, function () {
+      $("#website").addClass("hidden-button")
     });
+
+    $("#aboutme").slideUp(1500, function () {
+      $("#aboutme").addClass("hidden-button")
+    });
+
+
+    $("#applications").animate({
+      height: "700px",
+    }, 1500, function () {
+      $("#applications").empty()
+        .addClass("back-web")
+        .removeAttr("id", "applications")
+        .attr("id", "newApp");
+
+      $("#newApp")
+        .append($("<div>")
+          .addClass("container")
+          .attr("id", "appHolder"))
+        .prepend(`<a class="waves-effect waves-light pulse btn black" id="back-app">Back</a></span>`);
+
+      for (i = 0; i < objectArray[0].length; i++) {
+        var appSection =
+
+          `     
+                <figure style="background-color:black;" class="${objectArray[3][i]} animated rubberBand">
+                 <img class="sensei" src="${objectArray[0][i]}">
+                <figcaption style="background-color:black;">
+                  <h6>${objectArray[1][i]}</h6><br>
+                  ${objectArray[2][i]}
+                </figcaption>
+                 <a href="${objectArray[4][i]}" target="_blank"></a>
+                </figure>
+          `
+        $("#appHolder").append(appSection)
+      }
+    });
+
+
+
+
   });
 
 
@@ -276,43 +289,91 @@ $(document).ready(function () {
       }, 750, function () {
         $("#applications")
           .removeAttr("style")
-        $("#aboutme").slideDown(1500, function () {
-          $("#applications").removeClass("hidden-button");
-          $("#website").slideDown(1500, function () {
-            $("#website").removeClass("hidden-button")
-          });
-        });
-
       });
+
+    $("#aboutme").slideDown(1500, function () {
+      $("#aboutme").removeClass("hidden-button");
+    });
+
+    $("#website").slideDown(1500, function () {
+      $("#website").removeClass("hidden-button")
+    });
+
+
+
   });
 
+
+
+  var webArray = [
+    pictureArr = [
+      "./assets/img/websites-images/first-responsive-site.png",
+      "./assets/img/websites-images/jon-lascaze.png",
+    ],
+
+    nameArr = [
+      "<h5>First Portfolio<h5>",
+      "<h5>Current Portfolio<h5>",
+    ],
+
+    descripArr = [
+      "This is my first responsive portfolio design.",
+      "Utilizing techniques previously learned, I updated my portfolio to be completely dynamic, and responsive.",
+    ],
+
+    animateArr = [
+      "imghvr-shutter-in-out-vert",
+      "imghvr-zoom-out-down",
+    ],
+
+    linkArr = [
+      "https://jlasc.github.io/Responsive-Portfolio/",
+      "https://jlasc.github.io/JonLascaze/",
+    ]
+  ]
 
 
   //Website - grow
   $("#website").on("click", function () {
 
-    $("#applications").slideUp(1500, function () {
-      $("#aboutme").slideUp(1500, function () {
-        $("#applications").addClass("hidden-button")
-        $("#aboutme").addClass("hidden-button")
-      });
-      $("#website").animate({
-        height: "700px",
-      }, 1500, function () {
-        $("#website").empty()
-          .addClass("about-me")
-          .removeAttr("id", "applications")
-          .attr("id", "newWeb");
-
-        var appSection =
-          `
-    <div class="container">
-      <a class="waves-effect waves-light pulse btn black" id="back-web">Back</a></span>
-    </div>
-    `
-        $("#newWeb").append(appSection);
-      });
+    $("#aboutme").slideUp(1500, function () {
+      $("#aboutme").addClass("hidden-button")
     });
+    $("#applications").slideUp(1500, function () {
+      $("#applications").addClass("hidden-button")
+    });
+    $("#website").animate({
+      height: "700px",
+    }, 1500, function () {
+      $("#website").empty()
+        .addClass("back-web")
+        .removeAttr("id", "website")
+        .attr("id", "newWeb");
+
+        $("#newWeb")
+        .append($("<div>")
+          .addClass("container")
+          .attr("id", "webHolder"))
+        .prepend(`<a class="waves-effect waves-light pulse btn black" id="back-web">Back</a></span>`);
+
+      for (i = 0; i < webArray[0].length; i++) {
+        var appSection =
+
+          `     
+                <figure style="background-color:black;" class="${webArray[3][i]} animated rubberBand">
+                 <img class="sensei" src="${webArray[0][i]}">
+                <figcaption style="background-color:black;">
+                  <h6>${webArray[1][i]}</h6><br>
+                  ${webArray[2][i]}
+                </figcaption>
+                 <a href="${webArray[4][i]}" target="_blank"></a>
+                </figure>
+          `
+        $("#webHolder").append(appSection)
+      }
+    });
+
+
   });
 
   //Website - shrink
@@ -322,21 +383,20 @@ $(document).ready(function () {
       .removeClass("back-app")
       .removeAttr("id", "newWeb")
       .attr("id", "website");
-
-    $("#website")
+      
+      $("#aboutme").slideDown(1500, function () {
+        $("#aboutme").removeClass("hidden-button")
+      });
+      $("#applications").slideDown(1500, function () {
+        $("#applications").removeClass("hidden-button");
+      });
+      $("#website")
       .append("<p class='topics'>Websites</p>")
       .animate({
         height: "250px",
       }, 750, function () {
-        $("#applications")
+        $("#website")
           .removeAttr("style")
-        $("#applications").slideDown(1500, function () {
-          $("#applications").removeClass("hidden-button");
-          $("#aboutme").slideDown(1500, function () {
-            $("#aboutme").removeClass("hidden-button")
-          });
-        });
-
       });
   });
 
