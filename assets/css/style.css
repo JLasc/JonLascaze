@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Aladin');
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 
+
 @media screen and (min-width: 768px) {
     div#name-text {
         font-size: 48px;
@@ -13,8 +14,11 @@
         font-size: 24px;
     }
 
-    .text-justify {
+    p.text-justify {
         font-size: 12px;
+    }
+    .ml12 {
+        font-size: 20px;
     }
 }
 
@@ -22,6 +26,8 @@ div.row.aboutlinks i {
     padding: 8px;
 
 }
+
+
 
 
 
@@ -84,7 +90,7 @@ img.left.self-picture {
 
 .text-justify {
     text-align: justify;
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
@@ -109,9 +115,19 @@ ul li {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    -webkit-transition:  2s;
-    transition:  2s;
+    -webkit-transition:  .5s;
+    transition:  .5s;
     overflow: auto;
+}
+
+#newWeb {
+    background-image: url("../img/textured_paper.png")
+}
+
+
+div#newApp figure, div#newWeb figure {
+    margin: 1rem;
+    border: 1px solid lightblue;
 }
 
 img.sensei {
@@ -159,7 +175,7 @@ img.sensei {
     /* TESTING SPACE  */
     .ml12 {
         font-weight: 200;
-        font-size: 1.2em;
+        font-size: .8em;
         font-family: 'Press Start 2P', cursive;
         text-transform: uppercase;
         letter-spacing: 0.5em;
