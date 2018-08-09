@@ -35,35 +35,36 @@ document.oncontextmenu = function () {
     $("#taco").removeClass("hidden-button").fadeIn()
     $("body").addClass("noscroll");
 
+    setTimeout(function() {
+      $("#taco").fadeOut()
+      $("body").removeClass("noscroll");
+    }, 2000)
 
     function displayContainers() {
       
       $("#start-container")
         .fadeOut(1000, function() {
-          $("#start-container").empty()
+          $("#start-container").remove()
         })
 
     $("#page-container").removeClass("hidden-button")
       .fadeOut(.05, function () {
-        $("#page-container").fadeIn(500)
+        $("#page-container").fadeIn(100)
       })
     $("#name-text").removeClass("hidden-button")
       .fadeOut(.05, function () {
-        $("#name-text").fadeIn(500)
+        $("#name-text").fadeIn(100)
       })
     $("#page-footer").removeClass("hidden-button")
       .fadeOut(.05, function () {
-        $("#page-footer").fadeIn(500)
+        $("#page-footer").fadeIn(100)
       })
 
 
-      setTimeout(function() {
-        $("#taco").fadeOut()
-        $("body").removeClass("noscroll");
-      }, 2000)
+
     }
 
-    setTimeout(displayContainers, 2000)
+    setTimeout(displayContainers, 000)
 
   }
 
