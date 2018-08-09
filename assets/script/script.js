@@ -44,7 +44,7 @@ document.oncontextmenu = function () {
       
       $("#start-container")
         .fadeOut(1000, function() {
-          $("#start-container").remove()
+          $("#start-container").empty()
         })
 
     $("#page-container").removeClass("hidden-button")
