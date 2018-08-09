@@ -33,26 +33,34 @@ document.oncontextmenu = function () {
   function reveal() {
 
     $("#taco").removeClass("hidden-button").fadeIn()
+    $("body").addClass("noscroll");
+
 
     function displayContainers() {
-      $("#taco").fadeOut().empty()
+      
       $("#start-container")
         .fadeOut(1000, function() {
           $("#start-container").empty()
         })
 
-    $("#page-container").removeClass("hidden")
+    $("#page-container").removeClass("hidden-button")
       .fadeOut(.05, function () {
-        $("#page-container").fadeIn(1500)
+        $("#page-container").fadeIn(500)
       })
-    $("#name-text").removeClass("hidden")
+    $("#name-text").removeClass("hidden-button")
       .fadeOut(.05, function () {
-        $("#name-text").fadeIn(1500)
+        $("#name-text").fadeIn(500)
       })
-    $("#page-footer").removeClass("hidden")
+    $("#page-footer").removeClass("hidden-button")
       .fadeOut(.05, function () {
-        $("#page-footer").fadeIn(1500)
+        $("#page-footer").fadeIn(500)
       })
+
+
+      setTimeout(function() {
+        $("#taco").fadeOut()
+        $("body").removeClass("noscroll");
+      }, 2000)
     }
 
     setTimeout(displayContainers, 2000)
