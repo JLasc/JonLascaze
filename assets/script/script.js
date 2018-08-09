@@ -19,7 +19,10 @@ document.oncontextmenu = function () {
     $("#start-container").empty()
   }
 
+
+
   function startFadeOut() {
+    $(".ml12").fadeOut()
     $("#self-gif")
       .removeClass("animated fadeIn")
       .addClass("animated zoomOut");
@@ -51,6 +54,9 @@ document.oncontextmenu = function () {
   /* Starting animation section  */
 
   // Wrap every letter in a span
+
+  //Unused at the moment
+  function introLine() {
   $('.ml12').each(function () {
     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
   });
@@ -79,7 +85,15 @@ document.oncontextmenu = function () {
       }
     });
 
+  }
 
+  function testStart() {
+    $(".ml12")
+      .removeClass("hidden-button")
+      introLine()
+  }
+
+  testStart()
 
   /* This starts the button click event section */
 
