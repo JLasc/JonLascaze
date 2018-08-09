@@ -235,4 +235,9 @@ img.sensei {
         font-size: 35px
       }
 
-      
+    #taco {
+        width: 30px;
+        height: 30px;
+        margin: 0 auto;  
+        padding-top: 25%;
+    }

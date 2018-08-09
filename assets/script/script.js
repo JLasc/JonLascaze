@@ -19,19 +19,28 @@ document.oncontextmenu = function () {
     $("#start-container").empty()
   }
 
-
-
   function startFadeOut() {
     $(".ml12").fadeOut()
     $("#self-gif")
       .removeClass("animated fadeIn")
       .addClass("animated zoomOut");
     setTimeout(empty, 500)
+   
   }
 
 
   //Reveals main cards
   function reveal() {
+
+    $("#taco").removeClass("hidden-button").fadeIn()
+
+    function displayContainers() {
+      $("#taco").fadeOut().empty()
+      $("#start-container")
+        .fadeOut(1000, function() {
+          $("#start-container").empty()
+        })
+
     $("#page-container").removeClass("hidden")
       .fadeOut(.05, function () {
         $("#page-container").fadeIn(1500)
@@ -44,6 +53,10 @@ document.oncontextmenu = function () {
       .fadeOut(.05, function () {
         $("#page-footer").fadeIn(1500)
       })
+    }
+
+    setTimeout(displayContainers, 2000)
+
   }
 
 
