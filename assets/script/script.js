@@ -36,7 +36,7 @@ document.oncontextmenu = function () {
     $("body").addClass("noscroll");
 
     setTimeout(function() {
-      $("#taco").fadeOut(1500)
+      $("#taco").fadeOut(500)
       $("body").removeClass("noscroll");
     }, 2000)
 
