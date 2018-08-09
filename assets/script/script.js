@@ -173,15 +173,15 @@ document.oncontextmenu = function () {
   //Portfolio Section
   var objectArray = [
     pictureArr = [
-      "./assets/img/portfolio-images/crystal-collector.png",
-      "./assets/img/portfolio-images/giftastic.png",
-      "./assets/img/portfolio-images/nyt-search.png",
-      "./assets/img/portfolio-images/psychic-game.png",
-      "./assets/img/portfolio-images/rps.png",
-      "./assets/img/portfolio-images/train-sched.png",
-      "./assets/img/portfolio-images/trivia.png",
-      "./assets/img/portfolio-images/w2di.png",
-      "./assets/img/portfolio-images/word-guess-game.png"
+      "./assets/img/portfolio-images/crystal-collector.jpg",
+      "./assets/img/portfolio-images/giftastic.jpg",
+      "./assets/img/portfolio-images/nyt-search.jpg",
+      "./assets/img/portfolio-images/psychic-game.jpg",
+      "./assets/img/portfolio-images/rps.jpg",
+      "./assets/img/portfolio-images/train-sched.jpg",
+      "./assets/img/portfolio-images/trivia.jpg",
+      "./assets/img/portfolio-images/w2di.jpg",
+      "./assets/img/portfolio-images/word-guess-game.jpg"
     ],
 
     nameArr = [
