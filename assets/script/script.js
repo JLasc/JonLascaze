@@ -109,9 +109,9 @@ document.oncontextmenu = function () {
 
   /* This starts the button click event section */
 
-
   //About Me - grow 
   $("#aboutme").click(function () {
+
 
     $("#applications")
       .slideUp(1500, function () {
