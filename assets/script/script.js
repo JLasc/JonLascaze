@@ -262,7 +262,6 @@ document.oncontextmenu = function () {
 
   ];
 
-  console.log(objectArray[0][0])
 
 
   // Application - grow
