@@ -151,7 +151,7 @@ document.oncontextmenu = function () {
               <i class="fab fa-github-alt"></i><a href="https://github.com/JLasc" target="_blank">Github</a>
 
 
-              <i class="fas fa-file-pdf"></i><a href="./assets/files/JonLascaze2018.pdf" target="_blank">Resume</a> 
+              <i class="fas fa-file-pdf"></i><a href="./assets/files/JLascaze2018.pdf" target="_blank">Resume</a> 
 
 
             </div>
