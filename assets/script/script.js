@@ -6,13 +6,13 @@ $(document).ready(function () {
 
 
   //Prevent Right Click
-document.oncontextmenu = function () { 
+  document.oncontextmenu = function () {
     return false;
- };
- 
- window.addEventListener('contextmenu', function (e) { 
-     e.preventDefault();
- }, false);
+  };
+
+  window.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  }, false);
 
 
   function empty() {
@@ -25,7 +25,7 @@ document.oncontextmenu = function () {
       .removeClass("animated fadeIn")
       .addClass("animated zoomOut");
     setTimeout(empty, 500)
-   
+
   }
 
 
@@ -36,25 +36,25 @@ document.oncontextmenu = function () {
     $("body").addClass("noscroll");
     $("#start-container").empty()
 
-    setTimeout(function() {
+    setTimeout(function () {
       $("#taco").fadeOut(1500)
       $("body").removeClass("noscroll");
-      
+
     }, 5000)
 
     function displayContainers() {
-      
 
-    $("#page-container").removeClass("hidden-button")
-    $("#name-text").removeClass("hidden-button")
-    $("#page-footer").removeClass("hidden-button")
+
+      $("#page-container").removeClass("hidden-button")
+      $("#name-text").removeClass("hidden-button")
+      $("#page-footer").removeClass("hidden-button")
 
 
     }
 
     displayContainers()
 
-    
+
 
   }
 
@@ -69,40 +69,40 @@ document.oncontextmenu = function () {
 
   //Unused at the moment
   function introLine() {
-  $('.ml12').each(function () {
-    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-  });
-
-  anime.timeline({
-      loop: false
-    })
-    .add({
-      targets: '.ml12 .letter',
-      translateX: [40, 0],
-      translateZ: 0,
-      opacity: [0, 1],
-      easing: "easeOutExpo",
-      duration: 1200,
-      delay: function (el, i) {
-        return 500 + 30 * i;
-      }
-    }).add({
-      targets: '.ml12 .letter',
-      translateX: [0, -30],
-      opacity: [1, 0],
-      easing: "easeInExpo",
-      duration: 1100,
-      delay: function (el, i) {
-        return 100 + 30 * i;
-      }
+    $('.ml12').each(function () {
+      $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
     });
+
+    anime.timeline({
+        loop: false
+      })
+      .add({
+        targets: '.ml12 .letter',
+        translateX: [40, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: function (el, i) {
+          return 500 + 30 * i;
+        }
+      }).add({
+        targets: '.ml12 .letter',
+        translateX: [0, -30],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: function (el, i) {
+          return 100 + 30 * i;
+        }
+      });
 
   }
 
   function testStart() {
     $(".ml12")
       .removeClass("hidden-button")
-      introLine()
+    introLine()
   }
 
   testStart()
@@ -183,16 +183,16 @@ document.oncontextmenu = function () {
       }, 1500, function () {
         $("#aboutme")
           .removeAttr("style");
-        });
+      });
 
-        $("#applications").slideDown(1500, function () {
-          $("#applications").removeClass("hidden-button");
-        });
+    $("#applications").slideDown(1500, function () {
+      $("#applications").removeClass("hidden-button");
+    });
 
-        $("#website").slideDown(1500, function () {
-          $("#website").removeClass("hidden-button")
-        });
-     
+    $("#website").slideDown(1500, function () {
+      $("#website").removeClass("hidden-button")
+    });
+
   });
 
 
@@ -255,7 +255,7 @@ document.oncontextmenu = function () {
       "https://jlasc.github.io/Rock-Paper-Scissor",
       "https://jlasc.github.io/Train-Scheduler",
       "https://jlasc.github.io/TriviaGame",
-      "https://jlasc.github.io/ProjectUno",
+      "https://jlasc.github.io/Weather2DoIt",
       "https://jlasc.github.io/Word-Guess-Game",
     ]
 
@@ -389,7 +389,7 @@ document.oncontextmenu = function () {
         .removeAttr("id", "website")
         .attr("id", "newWeb");
 
-        $("#newWeb")
+      $("#newWeb")
         .append($("<div>")
           .addClass("container")
           .attr("id", "webHolder"))
@@ -422,14 +422,14 @@ document.oncontextmenu = function () {
       .removeClass("back-app")
       .removeAttr("id", "newWeb")
       .attr("id", "website");
-      
-      $("#aboutme").slideDown(1500, function () {
-        $("#aboutme").removeClass("hidden-button")
-      });
-      $("#applications").slideDown(1500, function () {
-        $("#applications").removeClass("hidden-button");
-      });
-      $("#website")
+
+    $("#aboutme").slideDown(1500, function () {
+      $("#aboutme").removeClass("hidden-button")
+    });
+    $("#applications").slideDown(1500, function () {
+      $("#applications").removeClass("hidden-button");
+    });
+    $("#website")
       .append("<p class='topics'>Websites</p>")
       .animate({
         height: "250px",
